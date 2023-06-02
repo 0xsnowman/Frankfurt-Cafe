@@ -6,7 +6,7 @@ import { scrollTo } from "../utils";
 import Container from "./container";
 
 // images
-import Logo from "../assets/images/logo_red.webp";
+import Logo from "../assets/images/logo.svg";
 //import LogoV2 from "../assets/images/logo_red.png";
 
 const Header = () => {
@@ -21,6 +21,7 @@ const Header = () => {
     <div className="component-header">
       <Container className="component-header-container">
         <img className="component-header__logo" src={Logo} alt="logo" />
+        <p className="component-header__logo__title">The Holy Cross Brewing Society</p>
         <div
           className={[
             "component-header__nav-mobile-btn",
@@ -48,7 +49,7 @@ const Header = () => {
               }}
             >
               <div className="component-header__nav-mobile__link__text__text">
-                ABOUT
+                ABOUT US
               </div>
               <div
                 className="component-header__nav-mobile__link__text__dropdown"
@@ -155,7 +156,7 @@ const Header = () => {
               }}
             >
               <div className="component-header__nav-mobile__link__text__text">
-                COMMUNITY
+                FIND US
               </div>
               <div
                 className="component-header__nav-mobile__link__text__dropdown"
@@ -177,7 +178,7 @@ const Header = () => {
             >
               <a
                 className="component-header__nav-mobile__link__menu__item"
-                href="https://t.me/shinobilaunch"
+                href="https://telegram.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -185,7 +186,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav-mobile__link__menu__item"
-                href="https://t.me/shinobiannouncements"
+                href="https://the-holy-cross-brewing-society.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -193,7 +194,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav-mobile__link__menu__item"
-                href="https://twitter.com/shinobilaunch"
+                href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -201,7 +202,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav-mobile__link__menu__item"
-                href="https://www.instagram.com/shinobilaunch"
+                href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -209,7 +210,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav-mobile__link__menu__item"
-                href="https://medium.com/@shinobilaunch"
+                href="https://medium.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -217,40 +218,22 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className="component-header__nav-mobile__link">
-            <a
-              className="component-header__nav-mobile__link__text"
-              href="https://shinobi-inu.gitbook.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WHITEPAPER
-            </a>
-          </div>
-          <div className="component-header__nav-mobile__link">
-            <a
-              className="component-header__nav-mobile__link__text"
-              href="https://snapshot.shinobiinu.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GOVERNANCE
-            </a>
-          </div>
-          <a
-            className="component-header__nav-mobile__btn"
-            href="https://app.shinobiinu.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LAUNCH DAPP
-          </a>
         </div>
         <div className="component-header__nav">
           <div className="component-header__nav__link">
-            <div className="component-header__nav__link__text">ABOUT</div>
+            <div className="component-header__nav__link__text">ABOUT US</div>
             <div className="component-header__nav__link__dropdown"></div>
             <div className="component-header__nav__link__menu">
+              <div
+                className="component-header__nav__link__menu__item"
+                onClick={() => {
+                  scrollTo({
+                    id: "section-1"
+                  });
+                }}
+              >
+                CAFE INTRODUCTION
+              </div>
               <div
                 className="component-header__nav__link__menu__item"
                 onClick={() => {
@@ -259,7 +242,7 @@ const Header = () => {
                   });
                 }}
               >
-                ARCHETYPICAL NINJA
+                PRODUCTS
               </div>
               <div
                 className="component-header__nav__link__menu__item"
@@ -269,7 +252,7 @@ const Header = () => {
                   });
                 }}
               >
-                ART OF STEALTH
+                TEAM
               </div>
               <div
                 className="component-header__nav__link__menu__item"
@@ -279,57 +262,17 @@ const Header = () => {
                   });
                 }}
               >
-                TEAM
-              </div>
-              <div
-                className="component-header__nav__link__menu__item"
-                onClick={() => {
-                  scrollTo({
-                    id: "section-5"
-                  });
-                }}
-              >
-                TOKENOMICS
-              </div>
-              <div
-                className="component-header__nav__link__menu__item"
-                onClick={() => {
-                  scrollTo({
-                    id: "section-6"
-                  });
-                }}
-              >
-                ROADMAP
-              </div>
-              <div
-                className="component-header__nav__link__menu__item"
-                onClick={() => {
-                  scrollTo({
-                    id: "section-7"
-                  });
-                }}
-              >
-                HOW TO BUY
-              </div>
-              <div
-                className="component-header__nav__link__menu__item"
-                onClick={() => {
-                  scrollTo({
-                    id: "section-9"
-                  });
-                }}
-              >
                 FAQ
               </div>
             </div>
           </div>
           <div className="component-header__nav__link">
-            <div className="component-header__nav__link__text">COMMUNITY</div>
+            <div className="component-header__nav__link__text">FIND US</div>
             <div className="component-header__nav__link__dropdown"></div>
             <div className="component-header__nav__link__menu">
               <a
                 className="component-header__nav__link__menu__item"
-                href="https://t.me/shinobilaunch"
+                href="https://#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -337,15 +280,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav__link__menu__item"
-                href="https://t.me/shinobiannouncements"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ANNOUNCEMENTS
-              </a>
-              <a
-                className="component-header__nav__link__menu__item"
-                href="https://twitter.com/shinobilaunch"
+                href="https://#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -353,7 +288,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav__link__menu__item"
-                href="https://www.instagram.com/shinobilaunch"
+                href="https://#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -361,7 +296,7 @@ const Header = () => {
               </a>
               <a
                 className="component-header__nav__link__menu__item"
-                href="https://medium.com/@shinobilaunch"
+                href="https://#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -369,31 +304,6 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <a
-            className="component-header__nav__link"
-            href="https://shinobi-inu.gitbook.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WHITEPAPER
-          </a>
-          <a
-            className="component-header__nav__link"
-            href="https://snapshot.shinobiinu.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GOVERNANCE
-          </a>
-          <div className="component-header__nav__divider"></div>
-          <a
-            className="component-header__nav__btn"
-            href="https://app.shinobiinu.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LAUNCH DAPP
-          </a>
         </div>
       </Container>
     </div>

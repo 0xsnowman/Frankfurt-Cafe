@@ -14,6 +14,7 @@
       display: flex;
       align-items: center;
       height: 90vh;
+      opacity: 0.4;
 
       @media only screen and (min-width: 1200px) {
         height: 90vh;
@@ -84,6 +85,15 @@
         transition: $t-transition;
         &:hover {
           background-color: #f3135c;
+        }
+      }
+    }
+
+    &__carousel {
+      &__image {
+        img {
+          width: 100%;
+          height: 50%;
         }
       }
     }
@@ -247,74 +257,19 @@
     justify-content: center;
     gap: 20px;
     width: 100%;
-    padding-bottom: 20px;
+    position: relative;
 
     &__title {
+      position: absolute;
+      top: -50px;
+      text-align: center;
+      width: 100%;
+      z-index: 10;
       color: #1e1e20;
       font-size: 80px;
       font-family: RubikBlack;
-      -webkit-text-stroke: 1px white;
+      -webkit-text-stroke: 1px transparent;
       text-align: center;
-    }
-
-    &__teams {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 60px;
-      width: 100%;
-
-      @media only screen and (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      @media only screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-      }
-
-      &__member {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-
-        .box-1 {
-          background-image: url("../../assets/images/team1-fijibayashi.webp");
-        }
-        .box-2 {
-          background-image: url("../../assets/images/team2-hattori.webp");
-        }
-        .box-3 {
-          background-image: url("../../assets/images/team3-ishikawa.webp");
-        }
-        .box-4 {
-          background-image: url("../../assets/images/team4-kawazaki.webp");
-        }
-        .box-5 {
-          background-image: url("../../assets/images/team5-kirigakure.webp");
-        }
-        .box-6 {
-          background-image: url("../../assets/images/team6-momochi.webp");
-        }
-
-        &__box {
-          // height: 160px;
-          width: 100%;
-          padding-bottom: 100%;
-          border: 2px solid white;
-          border-radius: 8px;
-          background-size: cover;
-          background-position: center;
-          box-sizing: border-box;
-        }
-
-        &__name {
-          text-align: center;
-          color: white;
-          font-family: RubikMedium;
-          font-size: $fs-p1;
-          display: flex;
-        }
-      }
     }
   }
 
@@ -322,148 +277,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // gap: 10px;
 
     &__title {
-      color: white;
-      font-size: $fs-title;
-      font-family: RubikBold;
-      text-align: center;
-    }
-
-    &__subtitle {
-      color: #f3135c;
-      font-size: $fs-subtitle;
-      font-family: RubikBold;
-      text-align: center;
-    }
-
-    &__tax {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-
-      @media only screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
-      }
-
-      &__buy {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        &__title {
-          text-align: center;
-          color: white;
-          font-size: $fs-p1;
-          font-family: RubikBold;
-        }
-
-        &__group {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20px;
-
-          @media only screen and (max-width: 1000px) {
-            grid-template-columns: 1fr;
-          }
-
-          &__item {
-            border: 2px solid white;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 2.5rem 1.5rem;
-
-            img {
-              width: 50px;
-            }
-
-            &__title {
-              color: white;
-              font-size: $fs-p3;
-              font-family: RubikMedium;
-              text-align: center;
-            }
-
-            &__paragraph {
-              color: white;
-              line-height: 1.8;
-              font-size: $fs-p3;
-              font-family: RubikLight;
-            }
-          }
-        }
-      }
-
-      &__sell {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        &__title {
-          text-align: center;
-          color: white;
-          font-size: $fs-p1;
-          font-family: RubikBold;
-        }
-
-        &__group {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20px;
-
-          @media only screen and (max-width: 1000px) {
-            grid-template-columns: 1fr;
-          }
-
-          &__item {
-            border: 2px solid white;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 2.5rem 1.5rem;
-
-            img {
-              width: 50px;
-            }
-
-            &__title {
-              color: white;
-              font-size: $fs-p3;
-              font-family: RubikMedium;
-              text-align: center;
-            }
-
-            &__paragraph {
-              color: white;
-              line-height: 1.8;
-              font-size: $fs-p3;
-              font-family: RubikLight;
-            }
-          }
-        }
-      }
-    }
-
-    &__text-disclaimer {
-      font-family: RubikLight;
-      font-size: $fs-p3;
-      margin-top: 50px;
-      font-style: italic;
-      line-height: 1.5;
-
-      &__title {
+      p {
         color: white;
-        font-style: italic;
-      }
-
-      &__paragraph {
-        color: white;
-        font-style: italic;
+        text-align: center;
+        font-family: RubikBold;
       }
     }
   }
@@ -490,33 +309,120 @@
       margin-bottom: 10px;
     }
 
-    &__group {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 20px;
-      width: 100%;
+    
+    &__blossom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-      @media only screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
+      @media only screen and (max-width: 720px) {
+        flex-direction: column;
+        gap: 10px;
       }
 
-      &__item {
-        border-radius: 8px;
-        border: 2px solid white;
-        padding: 2.5rem 1.5rem;
+      &__address {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         &__title {
-          font-size: 30px;
-          font-family: Rubikbold;
+          color: white;
+          font-size: $fs-subtitle;
+          font-family: RubikBold;
           text-align: center;
+          margin-bottom: 10px;
+        }
+
+        &__content {
+          color: white;
+          font-size: $fs-p3;
+          padding: 20px;
+          font-family: RubikBold;
+        }
+
+        &__btns {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          font-family: RubikMedium;
+          font-size: $fs-p3;
+          z-index: 2;
+
+          &__btn-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            width: 170px;
+            border: 3px solid #f3135c;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &__business-hour {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 340px;
+
+        &__clock {
+          width: 100px;
+          height: 100px;
           color: white;
         }
 
-        &__list {
-          margin-top: 20px;
+        &__title {
+          color: white;
+          font-size: $fs-subtitle;
+          font-family: RubikBold;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        &__content {
+          color: white;
+          font-size: $fs-p3;
+          padding: 20px;
+        }
+
+        &__btns {
+          margin-top: 30px;
           display: flex;
+          flex-direction: row;
+          gap: 20px;
+          font-family: RubikMedium;
+          font-size: $fs-p3;
+          z-index: 2;
+          width: 100%;
+          border-top: 2px solid white;
+          justify-content: center;
+          padding-top: 30px;
           flex-direction: column;
-          gap: 10px;
+
+          &__item {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+
+            &__weekday {
+              font-weight: bold;
+              color: white;
+            }
+
+            &__time {
+              font-weight: bold;
+              color: white;
+            }
+          }
         }
       }
     }

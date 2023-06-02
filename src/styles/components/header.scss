@@ -21,6 +21,11 @@
 
   &__logo {
     height: 70px;
+
+    &__title {
+      color: white;
+      font-size: 20px;
+    }
   }
 
   &__nav-mobile {
